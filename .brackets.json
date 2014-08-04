@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/home/marek/web/dist/public/bower_components/bootstrap/js/tab.js"
+    ]
+}
