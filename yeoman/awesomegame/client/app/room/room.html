@@ -1,0 +1,30 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="well well-sm">
+
+    <div class="row">
+
+        <div class="col-sm-6">
+
+            <accordion close-others="true">
+                <accordion-group is-open="status.open" ng-repeat="room in rooms">
+                    <accordion-heading>
+                        {{ room.name }} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                    </accordion-heading>
+                    {{ room.name }}, ILOŚĆ GRACZY: 2
+                </accordion-group>
+            </accordion>
+
+        </div>
+
+        <form class="thing-form">
+            <label>Załóż nowy pokój</label>
+            <p class="input-group">
+                <input type="text" class="form-control" placeholder="Add a new name here." ng-model="newRoom">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary" ng-click="addRoom()">Add New</button>
+                </span>
+            </p>
+        </form>
+    </div>
+</div>
