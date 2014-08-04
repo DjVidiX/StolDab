@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('stolDabProjectApp')
-.controller('MainController', function ($scope, $http) {
+.controller('PortfolioController', function ($scope, $http) {
     $scope.awesomeThings = [];
 
     $http.get('/api/things').success(function(awesomeThings) {
