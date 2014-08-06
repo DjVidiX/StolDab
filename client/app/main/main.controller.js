@@ -16,6 +16,14 @@ angular.module('webApp')
       $scope.newThing = '';
     };
 
+    $scope.myInterval = 5000;
+
+    $scope.slides = [
+        'assets/images/slider/1.JPG',
+        'assets/images/slider/2.JPG',
+        'assets/images/slider/3.JPG'
+      ];
+
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="box">
             <div class="col-lg-12 text-center">
-                <div id="carousel-example-generic" class="carousel slide">
+                <div>
                     <!-- Indicators -->
 <!--
                     <ol class="carousel-indicators hidden-xs">
@@ -17,13 +17,17 @@
                         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                     </ol>
 -->
+                    <carousel interval="myInterval">
+                          <slide ng-repeat="slide in slides" active="slide.active">
+                            <img ng-src="{{slide}}" style="margin:auto;">
+                          </slide>
+                        </carousel>
 
-                    <ul rn-carousel class="image">
-                        <li><img class="img-responsive img-full" src="assets/images/slider/1.JPG" alt=""></li>
-                        <li><img class="img-responsive img-full" src="assets/images/slider/2.JPG" alt=""></li>
-                        <li><img class="img-responsive img-full" src="assets/images/slider/3.JPG" alt=""></li>
+                    <!-- <ul rn-carousel class="image">
+                        <li>slide #1</li>
+                        <li>slide #2</li>
                     </ul>
-
+ -->
                     <!-- Wrapper for slides -->
 <!--
                     <div class="carousel-inner">
