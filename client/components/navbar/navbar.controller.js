@@ -1,15 +1,15 @@
 'use strict';
 
 angular.module('webApp')
-.controller('NavbarController', function ($scope, $location, Auth) {
+.controller('NavbarController', function ($scope, $state, $location, Auth) {
     $scope.menu = [
         {
             'title': 'Home',
-            'link': '/'
+            'state': 'main'
         },
         {
             'title': 'Działalność',
-            'link': '/offer'
+            'state': 'portfolio'
         }
     ];
 
@@ -25,5 +25,6 @@ angular.module('webApp')
 
     $scope.isActive = function (route) {
         return route === $location.path();
+        // return true;
     };
 });
